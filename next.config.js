@@ -5,9 +5,7 @@ const nextConfig = {
       {
         source: '/api/:path*',
         destination:
-          process.env.NODE_ENV === 'production'
-            ? 'http://nextjs-flask-starter-five-blue.vercel.app/api/:path*',
-            : '/',
+          process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:8000/api/:path*' : '/api/',
       },
     ]
   },
